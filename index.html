@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="display: flex;flex-direction: row;flex-wrap: nowrap;align-content: center;justify-content: center;align-items: center; padding:10px">
+    <form style="display:flex">
+        <div class="form-group" style="margin:0 10px">
+            <select class="form-control" id="traveller">
+                <option value="">--Select Traveller--</option>
+                <option value="akhil">Akhil</option>
+                <option value="kavya">Kavya</option>
+            </select>
+        </div>
+        <div class="form-group" style="margin:0 10px">
+            <select class="form-control" id="type">
+                <option value="">--Select Type--</option>
+                <option value="arrival">Arrival</option>
+                <option value="departure">Departure</option>
+            </select>
+        </div>
+    </form>
+    <button id="show" type="button" class="btn btn-success" style="margin: 0 10px">Show Details</button>
+</div>
+
+<div class="container tohide" id="akhil">
+    <div id="arrival" class="tohide">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#govt">Arrival Details</a></li>
+            <li><a href="#vaccination">Vaccination</a></li>
+            <li><a href="#visaValidity">Visa Validity</a></li>
+            <li><a href="#ticket">Ticket</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="govt" class="tab-pane fade in active">
+                <object id="pdfObj" style="height:100vh" data="./akhil/arrival/indiagovt.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="vaccination" class="tab-pane fade">
+                <object id="pdfObj" style="height:100vh" data="./akhil/vacination.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="visaValidity" class="tab-pane fade">
+                <object id="pdfObj" style="height:100vh" data="./akhil/epassvalidtity.pdf"  type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="ticket" class="tab-pane fade">
+                <object id="pdfObj" style="height:100vh"  data="./akhil/arrival/arivalTicket.pdf"  type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+        </div>
+    </div>
+    <div id="departure" class="tohide">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#govtdep">Arrival Details</a></li>
+            <li><a href="#vaccinationdep">Vaccination</a></li>
+            <li><a href="#visaValiditydep">Visa Validity</a></li>
+            <li><a href="#ticketdep">Ticket</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="govtdep" class="tab-pane fade in active">
+                <object id="pdfObj" style="height:100vh" data="./akhil/departure/sggovt.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="vaccinationdep" class="tab-pane fade">
+                <object id="pdfObj" style="height:100vh" data="./akhil/vacination.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="visaValiditydep" class="tab-pane fade">
+                <object id="pdfObj" style="height:100vh" data="./akhil/epassvalidtity.pdf"  type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="ticketdep" class="tab-pane fade">
+                <object id="pdfObj" style="height:100vh"  data="./akhil/departure/departureticket.pdf"  type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container tohide" id="kavya">
+    <div id="departure"  class="tohide">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#govtdepkav">Arrival Details</a></li>
+            <li><a href="#vaccinationdepkav">Vaccination</a></li>
+            <li><a href="#visaValiditydepkav">Visa Validity</a></li>
+            <li><a href="#ticketdepkav">Ticket</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="govtdepkav" class="tab-pane fade in active">
+                <object id="pdfObj" style="height:100vh" data="./kavya/departure/sggovt.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="vaccinationdepkav" class="tab-pane fade">
+                <object id="pdfObj" style="height:100vh" data="./kavya/vacination.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="visaValiditydepkav" class="tab-pane fade">
+                <object id="pdfObj" style="height:100vh" data="./kavya/epassvalidtity.pdf"  type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+            <div id="ticketdepkav" class="tab-pane fade">
+                <object id="pdfObj"  style="height:100vh" data="./akhil/departure/departureticket.pdf"  type="application/pdf" width="100%" height="100%">
+                    <p>File not found</p>
+                </object>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".tohide").hide();
+        $(".nav-tabs a").click(function(){
+            $(this).tab('show');
+        });
+        $("#show").on('click', function(){
+            $(".tohide").hide();
+            var traveller = $("#traveller").val();
+            var type = $("#type").val(); 
+            $("#"+traveller).show();
+            $("#"+traveller+" "+"#"+type).show(); 
+        });    
+    });
+</script>
+
+</body>
+</html>
